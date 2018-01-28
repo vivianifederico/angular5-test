@@ -1,3 +1,15 @@
-<p>
-  joke works!
-</p>
+<div class="card card-block">
+  <h4 class="card-title">
+    <ng-content select='span'></ng-content>
+</h4>
+  <p class="card-text" 
+        [hidden]="data.hide">
+        <ng-content select='h1'></ng-content>>
+  </p>
+  <a (click)="data.toggle()" 
+        class="btn btn-warning">Tell Me
+  </a>
+  <a (click)="deleteJoke()" 
+        class="btn btn-danger">Delete
+  </a>
+</div>

@@ -1,31 +1,12 @@
 import { Output, Input, EventEmitter, Component } from "@angular/core";
 import { Joke } from "../joke";
 
-
-
 @Component({
   selector: 'joke-form',
-  template: `
-    <div class="card card-block">
-    <h4 class="card-title">Create Joke</h4>
-    <div class="form-group">
-      <input type="text"
-        class="form-control"
-        placeholder="Enter the setup"
-        #setup>
-    </div>
-    <div class="form-group">
-      <input type="text"
-        class="form-control"
-        placeholder="Enter the punchline"
-        #punchline>
-      </div>
-      <button type="button"
-        class="btn btn-primary"
-        (click)="createJoke(setup.value, punchline.value)"> Create
-      </button>
-    </div>
-  `
+  templateUrl: 'joke-form.component.html',
+  styleUrls: [
+    'joke-form.component.css'
+  ]
 })
 
 export class JokeFormComponent {
